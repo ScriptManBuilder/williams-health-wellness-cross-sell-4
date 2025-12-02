@@ -64,11 +64,19 @@ const Header: React.FC = () => {
     <HeaderContainer>
       <Nav>
         <Logo onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.86-.96-7-5.17-7-9V8.33L12 4.5l7 3.83V11c0 3.83-3.14 8.04-7 9z"/>
-            <path d="M10.5 13.5l-2-2-1.5 1.5 3.5 3.5 6-6-1.5-1.5z"/>
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 4C9.373 4 4 9.373 4 16C4 22.627 9.373 28 16 28C22.627 28 28 22.627 28 16C28 9.373 22.627 4 16 4Z" fill="url(#gradient1)"/>
+            <path d="M16 8C11.582 8 8 11.582 8 16C8 20.418 11.582 24 16 24C20.418 24 24 20.418 24 16C24 11.582 20.418 8 16 8Z" fill="white" fillOpacity="0.2"/>
+            <path d="M12 16L14.5 18.5L20 13" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M16 10V12M16 20V22M10 16H12M20 16H22" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+            <defs>
+              <linearGradient id="gradient1" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#F97316"/>
+                <stop offset="1" stopColor="#EA580C"/>
+              </linearGradient>
+            </defs>
           </svg>
-          {process.env.REACT_APP_COMPANY_NAME?.split(' Inc.')[0] || 'Williams Health Perks'}
+          {process.env.REACT_APP_BRAND_NAME || 'Vitalyx'}
         </Logo>
         <NavLinks>
           <NavLink href="#features" onClick={(e) => handleNavClick(e, '#features')}>Features</NavLink>
