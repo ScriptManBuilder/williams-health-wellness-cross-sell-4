@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
             Explore Benefits →
           </CTAButtonPrimary>
           <CTAButtonSecondary onClick={handleScheduleCall}>
-            Learn More
+            Get in touch
           </CTAButtonSecondary>
         </CTAButtonGroup>
       </HeroContent>
